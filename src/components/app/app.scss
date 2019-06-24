@@ -1,0 +1,30 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+.container {
+    max-width: 700px;
+    padding: 0 5px;
+    margin: auto;
+}
+.search-panel {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+@media only screen and (max-width: 730px) {
+    .filter-group {
+        margin-bottom: 10px;
+    }
+    .search-panel {
+        flex-wrap: wrap;
+    }
+}

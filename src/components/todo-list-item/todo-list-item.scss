@@ -1,0 +1,129 @@
+$accent: orange;
+.todo__item {
+  border-bottom: 1px solid #ccc;
+  &:last-child {
+    border-bottom: 0;
+  }
+  &-title {
+    
+  }
+  &-edit {
+    width: 100%;
+    &__input {
+      width: 100%;
+      min-height: 42px;
+      box-sizing: border-box;
+      border: 1px solid #b8b8b8;
+      padding: 10px;
+      display: none;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+        border-color: $accent;
+        box-shadow: none;
+      }
+    }
+  }
+}
+.todo__item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+.todo__button-group {
+  display: flex;
+  padding-left: 10px;
+  button {
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $accent;
+      outline: none;
+    }
+  }
+  .todo__item-star {
+    background-color: orange;
+  }
+  .todo__item-edit {
+    background-color: green;
+  }
+  .todo__item-delete {
+    background-color: red;
+  }
+}
+.todo__checkbox-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.todo__item_done {
+  text-decoration: line-through;
+}
+.styled-checkbox {
+  position: absolute;
+  & + label {
+    position: relative;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+  & + label:before {
+    content: '';
+    margin: 0;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid orange;
+    box-sizing: border-box;
+  }
+  &:hover + label:before {
+    background: orange;
+  }
+  
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+  &:checked + label:before {
+    background: orange;
+  }
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+  &:disabled + label:before {
+    box-shadow: none;
+    background: orange;
+  }
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}

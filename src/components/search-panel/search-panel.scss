@@ -1,0 +1,14 @@
+.search-panel__input {
+    height: 42px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    transition: all .3s ease;
+    &:focus {
+      border-color: orange;
+      outline: none;
+    }
+}

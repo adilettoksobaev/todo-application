@@ -1,0 +1,31 @@
+.filter-group {
+    max-width: 33%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.filter-group__btn {
+    padding: 10px 20px;
+    border: none;
+    background: green;
+    color: #fff;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-right: 2px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &:active,
+    &:focus {
+        outline: none
+    }
+    &:hover,
+    &-orange {
+        background-color: orange;
+    }
+}

@@ -1,0 +1,25 @@
+.add-form {
+    display: flex;
+}
+.add-form__input {
+    width: 100%;
+    margin: 0;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-right: 0;
+    box-shadow: none;
+    outline: none;
+    transition: all .3s ease;
+    &:focus {
+        border-color: orange
+    }
+}
+.add-form__button {
+    border: none;
+    padding: 15px 30px;
+    background: orange;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
